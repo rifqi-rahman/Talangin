@@ -494,6 +494,39 @@ body {
     }
 }
 
+/* Scroll Animation Classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero animations */
+.hero-content > * {
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.hero-title {
+    animation-delay: 0.2s;
+}
+
+.hero-subtitle {
+    animation-delay: 0.4s;
+}
+
+.hero-cta {
+    animation-delay: 0.6s;
+}
+
+.phone-mockup {
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
 /* ==========================================
    Responsive Design
    ========================================== */
