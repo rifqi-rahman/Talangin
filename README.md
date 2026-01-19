@@ -9,7 +9,7 @@ Talangin is a modern iOS app for managing shared expenses with friends and famil
 ## Features
 
 - **Responsive Design**: Mobile-first design that works on all devices
-- **Smooth Animations**: GSAP-powered animations for engaging user experience
+- **Smooth Animations**: Vanilla JavaScript animations with Intersection Observer API for engaging user experience
 - **Brand Colors**: Custom color system based on Water and Olive themes
 - **Modern UI**: Clean, intuitive interface showcasing app features
 
@@ -32,8 +32,8 @@ Talangin is a modern iOS app for managing shared expenses with friends and famil
 - HTML5
 - CSS3 (with CSS Variables)
 - JavaScript (ES6+)
-- GSAP (GreenSock Animation Platform)
-- ScrollTrigger (GSAP plugin)
+- Intersection Observer API (for scroll animations)
+- Vanilla JavaScript animations
 
 ## Getting Started
 
