@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Talangin - iOS App Promotional Website
+    Created: 2026-01-20
+    Description: Landing page for Talangin split-bill management iOS app
+    Features: GSAP animations, glass-morphism UI, responsive design
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talangin - The smarter way to split bills and manage shared expenses with friends. Better than Splitwise.">
+    <meta name="keywords" content="split bill, expense management, shared expenses, bill splitting app, iOS app">
+    <meta name="theme-color" content="#3C79C3">
+    
+    <title>Talangin — Split Bills Effortlessly</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- ========================================
+         NAVIGATION
+         ======================================== -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav__container">
+            <a href="#" class="nav__logo" aria-label="Talangin Home">
+                <svg class="nav__logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                    <path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="nav__logo-text">Talangin</span>
+            </a>
+            
+            <div class="nav__links">
+                <a href="#features" class="nav__link" data-i18n="nav.features">Features</a>
+                <a href="#how-it-works" class="nav__link" data-i18n="nav.how-it-works">How It Works</a>
+                <a href="#download" class="nav__link" data-i18n="nav.download">Download</a>
+            </div>
+            
+            <div class="nav__actions">
+                <!-- Language Switcher -->
+                <div class="nav__lang-switcher">
+                    <button class="nav__lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                    <span class="nav__lang-divider">/</span>
+                    <button class="nav__lang-btn" data-lang="id" aria-pressed="false">ID</button>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="nav__theme-icon nav__theme-icon--light" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.93 4.93l1.41 1.41M13.66 13.66l1.41 1.41M4.93 15.07l1.41-1.41M13.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="nav__theme-icon nav__theme-icon--dark" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <a href="#download" class="btn btn--primary">
+                    <span data-i18n="nav.get-app">Get the App</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <button class="nav__mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="nav__hamburger"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__content">
+            <a href="#features" class="mobile-menu__link" data-i18n="nav.features">Features</a>
+            <a href="#how-it-works" class="mobile-menu__link" data-i18n="nav.how-it-works">How It Works</a>
+            <a href="#download" class="mobile-menu__link" data-i18n="nav.download">Download</a>
+            
+            <!-- Mobile Theme & Language Controls -->
+            <div class="mobile-menu__controls">
+                <div class="mobile-menu__lang">
+                    <button class="mobile-menu__lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                    <span class="mobile-menu__lang-divider">/</span>
+                    <button class="mobile-menu__lang-btn" data-lang="id" aria-pressed="false">ID</button>
+                </div>
+                <button class="mobile-menu__theme-btn" id="mobile-theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="mobile-menu__theme-icon mobile-menu__theme-icon--light" width="24" height="24" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.93 4.93l1.41 1.41M13.66 13.66l1.41 1.41M4.93 15.07l1.41-1.41M13.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="mobile-menu__theme-icon mobile-menu__theme-icon--dark" width="24" height="24" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <a href="#download" class="btn btn--primary btn--full" data-i18n="nav.get-app">Get the App</a>
+        </div>
+    </div>
+
+    <!-- ========================================
+         HERO SECTION
+         ======================================== -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="hero__gradient hero__gradient--1"></div>
+            <div class="hero__gradient hero__gradient--2"></div>
+            <div class="hero__gradient hero__gradient--3"></div>
+            <div class="hero__pattern"></div>
+        </div>
+        
+        <div class="hero__container">
+            <div class="hero__content">
+                <div class="hero__badge" data-animate="fade-up">
+                    <span class="hero__badge-dot"></span>
+                    <span data-i18n="hero.badge">Now available on iOS</span>
+                </div>
+                
+                <h1 class="hero__title" data-animate="fade-up" data-delay="0.1">
+                    <span data-i18n="hero.title.line1">Split bills with</span>
+                    <span class="hero__title-highlight" data-i18n="hero.title.highlight">elegance</span>
+                    <span data-i18n="hero.title.line2">and ease</span>
+                </h1>
+                
+                <p class="hero__subtitle" data-animate="fade-up" data-delay="0.2" data-i18n="hero.subtitle">
+                    The smarter way to manage shared expenses. Track who owes what, settle up instantly, and keep friendships intact.
+                </p>
+                
+                <div class="hero__cta" data-animate="fade-up" data-delay="0.3">
+                    <a href="#download" class="btn btn--primary btn--large">
+                        <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M14.5 10.5c0-2.5-2-4.5-4.5-4.5s-4.5 2-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M10 2v6M7 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="3" y="11" width="14" height="7" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span data-i18n="hero.cta.primary">Download for iOS</span>
+                    </a>
+                    <a href="#how-it-works" class="btn btn--ghost btn--large">
+                        <span data-i18n="hero.cta.secondary">See how it works</span>
+                    </a>
+                </div>
+                
+                <div class="hero__stats" data-animate="fade-up" data-delay="0.4">
+                    <div class="hero__stat">
+                        <span class="hero__stat-value">50K+</span>
+                        <span class="hero__stat-label" data-i18n="hero.stat.users">Active Users</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-value">$2M+</span>
+                        <span class="hero__stat-label" data-i18n="hero.stat.bills">Bills Split</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-value">4.9★</span>
+                        <span class="hero__stat-label" data-i18n="hero.stat.rating">App Store</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero__visual" data-animate="fade-left" data-delay="0.2">
+                <div class="hero__phone">
+                    <div class="hero__phone-frame">
+                        <div class="hero__phone-notch"></div>
+                        <div class="hero__phone-screen">
+                            <!-- App UI Mockup -->
+                            <div class="app-mockup">
+                                <div class="app-mockup__header">
+                                    <span class="app-mockup__title">Trip to Bali</span>
+                                    <span class="app-mockup__badge">4 people</span>
+                                </div>
+                                <div class="app-mockup__total">
+                                    <span class="app-mockup__total-label">Total Expenses</span>
+                                    <span class="app-mockup__total-value">Rp 12,450,000</span>
+                                </div>
+                                <div class="app-mockup__list">
+                                    <div class="app-mockup__item">
+                                        <div class="app-mockup__item-avatar" style="background: var(--color-water-light);">R</div>
+                                        <div class="app-mockup__item-info">
+                                            <span class="app-mockup__item-name">Rifqi</span>
+                                            <span class="app-mockup__item-status">owes you</span>
+                                        </div>
+                                        <span class="app-mockup__item-amount app-mockup__item-amount--positive">+Rp 850,000</span>
+                                    </div>
+                                    <div class="app-mockup__item">
+                                        <div class="app-mockup__item-avatar" style="background: var(--color-olive-light);">A</div>
+                                        <div class="app-mockup__item-info">
+                                            <span class="app-mockup__item-name">Ayu</span>
+                                            <span class="app-mockup__item-status">you owe</span>
+                                        </div>
+                                        <span class="app-mockup__item-amount app-mockup__item-amount--negative">-Rp 320,000</span>
+                                    </div>
+                                    <div class="app-mockup__item">
+                                        <div class="app-mockup__item-avatar" style="background: var(--color-water-02-light);">B</div>
+                                        <div class="app-mockup__item-info">
+                                            <span class="app-mockup__item-name">Budi</span>
+                                            <span class="app-mockup__item-status">settled up</span>
+                                        </div>
+                                        <span class="app-mockup__item-amount">Rp 0</span>
+                                    </div>
+                                </div>
+                                <button class="app-mockup__btn">Settle Up</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__phone-glow"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero__scroll" data-animate="fade-up" data-delay="0.6">
+            <span data-i18n="hero.scroll">Scroll to explore</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FEATURES SECTION
+         ======================================== -->
+    <section class="features" id="features">
+        <div class="features__container">
+            <div class="features__header" data-animate="fade-up">
+                <span class="section-label" data-i18n="features.label">Features</span>
+                <h2 class="section-title">
+                    <span data-i18n="features.title.line1">Everything you need to</span>
+                    <em data-i18n="features.title.highlight">split fairly</em>
+                </h2>
+                <p class="section-subtitle" data-i18n="features.subtitle">
+                    No more awkward money conversations. Talangin handles the math so you can focus on making memories.
+                </p>
+            </div>
+            
+            <div class="features__grid">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="feature-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M14 8v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title" data-i18n="features.realtime.title">Real-time Tracking</h3>
+                    <p class="feature-card__desc" data-i18n="features.realtime.desc">See expenses update instantly as your group adds new bills. Everyone stays in the loop.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="feature-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M7 14h14M7 14l4-4M7 14l4 4M21 14l-4-4M21 14l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title" data-i18n="features.share.title">Share Expenses</h3>
+                    <p class="feature-card__desc" data-i18n="features.share.desc">Easily share bills with friends and family. Send expense invites and let everyone contribute.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card" data-animate="fade-up" data-delay="0.3">
+                    <div class="feature-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M7 14l4 4 10-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title" data-i18n="features.smart.title">Smart Settlements</h3>
+                    <p class="feature-card__desc" data-i18n="features.smart.desc">Minimize transactions with our smart algorithm. One payment instead of many.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card" data-animate="fade-up" data-delay="0.4">
+                    <div class="feature-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M14 4c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M14 4v10l7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title" data-i18n="features.split.title">Split Any Way</h3>
+                    <p class="feature-card__desc" data-i18n="features.split.desc">Equal splits, percentages, or exact amounts. Customize how each expense is divided.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card" data-animate="fade-up" data-delay="0.5">
+                    <div class="feature-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="5" y="3" width="18" height="22" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M9 8h10M9 12h10M9 16h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title" data-i18n="features.ocr.title">OCR for Rapid Entry</h3>
+                    <p class="feature-card__desc" data-i18n="features.ocr.desc">Scan receipts instantly. Our OCR technology captures items and prices in seconds, not minutes.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card" data-animate="fade-up" data-delay="0.6">
+                    <div class="feature-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M21 10c0-3.87-3.13-7-7-7s-7 3.13-7 7c0 5.25 7 11 7 11s7-5.75 7-11z" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="14" cy="10" r="2" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title" data-i18n="features.groups.title">Trip Groups</h3>
+                    <p class="feature-card__desc" data-i18n="features.groups.desc">Organize expenses by trip, event, or household. Keep everything neat and tidy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         HOW IT WORKS SECTION
+         ======================================== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-it-works__bg">
+            <div class="how-it-works__gradient"></div>
+        </div>
+        
+        <div class="how-it-works__container">
+            <div class="how-it-works__header" data-animate="fade-up">
+                <span class="section-label" data-i18n="how.label">How It Works</span>
+                <h2 class="section-title">
+                    <span data-i18n="how.title.line1">Three steps to</span>
+                    <em data-i18n="how.title.highlight">financial harmony</em>
+                </h2>
+            </div>
+            
+            <div class="steps">
+                <!-- Step 1 -->
+                <div class="step" data-animate="fade-up" data-delay="0.1">
+                    <div class="step__number">01</div>
+                    <div class="step__content">
+                        <div class="step__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="15" r="6" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8 35c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="32" cy="12" r="5" fill="currentColor"/>
+                                <path d="M32 10v4M30 12h4" stroke="var(--color-bg-primary)" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="step__title" data-i18n="how.step1.title">Create a Group</h3>
+                        <p class="step__desc" data-i18n="how.step1.desc">Start a group for your trip, roommates, or any shared expense situation. Invite friends with a simple link.</p>
+                    </div>
+                    <div class="step__visual">
+                        <div class="step__card step__card--group">
+                            <div class="step__card-avatars">
+                                <div class="avatar" style="background: var(--color-water-light);">R</div>
+                                <div class="avatar" style="background: var(--color-olive-light);">A</div>
+                                <div class="avatar" style="background: var(--color-water-02-light);">B</div>
+                                <div class="avatar avatar--add">+</div>
+                            </div>
+                            <span class="step__card-label">Trip to Bali</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="step step--reverse" data-animate="fade-up" data-delay="0.2">
+                    <div class="step__number">02</div>
+                    <div class="step__content">
+                        <div class="step__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="6" y="8" width="28" height="24" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M6 16h28" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M12 24h8M12 28h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="step__title" data-i18n="how.step2.title">Add Expenses</h3>
+                        <p class="step__desc" data-i18n="how.step2.desc">Log bills as they happen. Snap a receipt or enter manually. Choose how to split each one.</p>
+                    </div>
+                    <div class="step__visual">
+                        <div class="step__card step__card--expense">
+                            <div class="step__card-header">
+                                <span class="step__card-emoji">🍽️</span>
+                                <span class="step__card-title">Dinner at Locavore</span>
+                            </div>
+                            <span class="step__card-amount">Rp 2,400,000</span>
+                            <div class="step__card-split">
+                                <span>Split equally</span>
+                                <span>4 people</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="step" data-animate="fade-up" data-delay="0.3">
+                    <div class="step__number">03</div>
+                    <div class="step__content">
+                        <div class="step__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M14 20l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="step__title" data-i18n="how.step3.title">Settle Up</h3>
+                        <p class="step__desc" data-i18n="how.step3.desc">When it's time to pay up, see exactly who owes whom. One tap to send payment reminders or mark as settled.</p>
+                    </div>
+                    <div class="step__visual">
+                        <div class="step__card step__card--settle">
+                            <div class="step__card-row">
+                                <span>You → Ayu</span>
+                                <span class="step__card-settled">Rp 320,000 ✓</span>
+                            </div>
+                            <div class="step__card-row">
+                                <span>Rifqi → You</span>
+                                <span class="step__card-pending">Rp 850,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         TESTIMONIAL SECTION
+         ======================================== -->
+    <section class="testimonials">
+        <div class="testimonials__container">
+            <div class="testimonials__header" data-animate="fade-up">
+                <span class="section-label" data-i18n="testimonials.label">Testimonials</span>
+                <h2 class="section-title">
+                    <span data-i18n="testimonials.title.line1">Loved by</span>
+                    <em data-i18n="testimonials.title.highlight">thousands</em>
+                </h2>
+            </div>
+            
+            <div class="testimonials__grid">
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__quote">"Finally, an expense tracker that doesn't make me want to avoid group trips. The smart settlement feature is genius!"</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar" style="background: var(--color-water-light);">S</div>
+                        <div class="testimonial-card__info">
+                            <span class="testimonial-card__name">Sarah K.</span>
+                            <span class="testimonial-card__role">Frequent Traveler</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card testimonial-card--featured" data-animate="fade-up" data-delay="0.2">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__quote">"We use Talangin for our shared apartment expenses. No more spreadsheets, no more arguments. It just works."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar" style="background: var(--color-olive-light);">M</div>
+                        <div class="testimonial-card__info">
+                            <span class="testimonial-card__name">Michael T.</span>
+                            <span class="testimonial-card__role">Shared Apartment</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.3">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p class="testimonial-card__quote">"The receipt scanner saves so much time. Way better than Splitwise's clunky interface."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar" style="background: var(--color-water-02-light);">D</div>
+                        <div class="testimonial-card__info">
+                            <span class="testimonial-card__name">Diana L.</span>
+                            <span class="testimonial-card__role">Event Organizer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SCREENSHOTS SECTION
+         ======================================== -->
+    <section class="screenshots" id="screenshots">
+        <div class="screenshots__container">
+            <div class="screenshots__header" data-animate="fade-up">
+                <span class="section-label" data-i18n="screenshots.label">Screenshots</span>
+                <h2 class="section-title">
+                    <span data-i18n="screenshots.title.line1">See it in</span>
+                    <em data-i18n="screenshots.title.highlight">action</em>
+                </h2>
+                <p class="section-subtitle" data-i18n="screenshots.subtitle">
+                    A glimpse of the beautiful and intuitive interface.
+                </p>
+            </div>
+            
+            <div class="screenshots__carousel" data-animate="fade-up" data-delay="0.2">
+                <div class="screenshots__track">
+                    <!-- TODO: Replace placeholder images with actual app screenshots -->
+                    <!-- Add actual screenshots to /assets/screenshots/ folder -->
+                    <div class="screenshots__item">
+                        <!-- PLACEHOLDER: Replace with actual screenshot of group expenses -->
+                        <img src="assets/screenshots/screenshot-1.png" alt="Talangin app screenshot - Group expenses view" loading="lazy" onerror="this.style.display='none'">
+                        <div class="screenshots__placeholder">
+                            <span>📊</span>
+                            <p>Group Expenses</p>
+                        </div>
+                    </div>
+                    <div class="screenshots__item">
+                        <!-- PLACEHOLDER: Replace with actual screenshot of add expense -->
+                        <img src="assets/screenshots/screenshot-2.png" alt="Talangin app screenshot - Add expense screen" loading="lazy" onerror="this.style.display='none'">
+                        <div class="screenshots__placeholder">
+                            <span>➕</span>
+                            <p>Add Expense</p>
+                        </div>
+                    </div>
+                    <div class="screenshots__item">
+                        <!-- PLACEHOLDER: Replace with actual screenshot of settlement -->
+                        <img src="assets/screenshots/screenshot-3.png" alt="Talangin app screenshot - Settlement summary" loading="lazy" onerror="this.style.display='none'">
+                        <div class="screenshots__placeholder">
+                            <span>✓</span>
+                            <p>Settlement</p>
+                        </div>
+                    </div>
+                    <div class="screenshots__item">
+                        <!-- PLACEHOLDER: Replace with actual screenshot of OCR scanner -->
+                        <img src="assets/screenshots/screenshot-4.png" alt="Talangin app screenshot - Receipt scanner" loading="lazy" onerror="this.style.display='none'">
+                        <div class="screenshots__placeholder">
+                            <span>📷</span>
+                            <p>OCR Scanner</p>
+                        </div>
+                    </div>
+                    <div class="screenshots__item">
+                        <!-- PLACEHOLDER: Replace with actual screenshot of trip groups -->
+                        <img src="assets/screenshots/screenshot-5.png" alt="Talangin app screenshot - Trip groups list" loading="lazy" onerror="this.style.display='none'">
+                        <div class="screenshots__placeholder">
+                            <span>✈️</span>
+                            <p>Trip Groups</p>
+                        </div>
+                    </div>
+                    <div class="screenshots__item">
+                        <!-- PLACEHOLDER: Replace with actual screenshot of profile -->
+                        <img src="assets/screenshots/screenshot-6.png" alt="Talangin app screenshot - User profile" loading="lazy" onerror="this.style.display='none'">
+                        <div class="screenshots__placeholder">
+                            <span>👤</span>
+                            <p>Profile</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CTA / DOWNLOAD SECTION
+         ======================================== -->
+    <section class="cta" id="download">
+        <div class="cta__bg">
+            <div class="cta__gradient cta__gradient--1"></div>
+            <div class="cta__gradient cta__gradient--2"></div>
+        </div>
+        
+        <div class="cta__container">
+            <div class="cta__content" data-animate="fade-up">
+                <h2 class="cta__title">
+                    <span data-i18n="cta.title.line1">Ready to split</span>
+                    <em data-i18n="cta.title.highlight">smarter?</em>
+                </h2>
+                <p class="cta__subtitle" data-i18n="cta.subtitle">
+                    Download Talangin and never stress about shared expenses again.
+                </p>
+                
+                <div class="cta__buttons">
+                    <a href="#" class="store-badge" aria-label="Download on the App Store">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        <div class="store-badge__text">
+                            <span class="store-badge__label" data-i18n="cta.store.label">Download on the</span>
+                            <span class="store-badge__store" data-i18n="cta.store.name">App Store</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <p class="cta__note" data-i18n="cta.note">Free to download. No credit card required.</p>
+            </div>
+            
+            <div class="cta__visual" data-animate="fade-left" data-delay="0.2">
+                <div class="cta__phone">
+                    <div class="cta__phone-frame">
+                        <div class="cta__phone-screen">
+                            <div class="cta__phone-content">
+                                <div class="cta__check">✓</div>
+                                <span class="cta__check-text" data-i18n="cta.check">All Settled!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <svg class="footer__logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Talangin</span>
+                    </a>
+                    <p class="footer__tagline" data-i18n="footer.tagline">Split bills with elegance.</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__heading" data-i18n="footer.product">Product</h4>
+                        <a href="#features" class="footer__link" data-i18n="nav.features">Features</a>
+                        <a href="#how-it-works" class="footer__link" data-i18n="nav.how-it-works">How It Works</a>
+                        <a href="#download" class="footer__link" data-i18n="nav.download">Download</a>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__heading" data-i18n="footer.company">Company</h4>
+                        <a href="announcement.html" class="footer__link" data-i18n="footer.announcements">Announcements</a>
+                        <a href="blog.html" class="footer__link" data-i18n="footer.blog">Blog</a>
+                        <a href="connect.html" class="footer__link" data-i18n="footer.contact">Connect</a>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__heading" data-i18n="footer.legal">Legal</h4>
+                        <a href="privacy.html" class="footer__link" data-i18n="footer.privacy">Privacy Policy</a>
+                        <a href="terms.html" class="footer__link" data-i18n="footer.terms">Terms of Service</a>
+                        <a href="connect.html" class="footer__link" data-i18n="footer.contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright" data-i18n="footer.copyright">© 2026 Talangin. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="https://instagram.com/talangin" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 1.8c2.673 0 2.99.01 4.042.058.976.044 1.506.207 1.858.344.467.182.8.399 1.15.748.35.35.566.683.748 1.15.137.352.3.882.344 1.858.048 1.052.058 1.369.058 4.042s-.01 2.99-.058 4.042c-.044.976-.207 1.506-.344 1.858-.182.467-.399.8-.748 1.15-.35.35-.683.566-1.15.748-.352.137-.882.3-1.858.344-1.052.048-1.369.058-4.042.058s-2.99-.01-4.042-.058c-.976-.044-1.506-.207-1.858-.344a3.098 3.098 0 01-1.15-.748 3.098 3.098 0 01-.748-1.15c-.137-.352-.3-.882-.344-1.858-.048-1.052-.058-1.369-.058-4.042s.01-2.99.058-4.042c.044-.976.207-1.506.344-1.858.182-.467.399-.8.748-1.15.35-.35.683-.566 1.15-.748.352-.137.882-.3 1.858-.344C7.01 1.81 7.327 1.8 10 1.8zm0-1.8C7.284 0 6.944.012 5.877.06 4.813.11 4.086.278 3.45.525a4.898 4.898 0 00-1.772 1.153A4.898 4.898 0 00.525 3.45C.278 4.086.11 4.813.06 5.877.012 6.944 0 7.284 0 10s.012 3.056.06 4.123c.05 1.064.218 1.791.465 2.427a4.898 4.898 0 001.153 1.772 4.898 4.898 0 001.772 1.153c.636.247 1.363.415 2.427.465C6.944 19.988 7.284 20 10 20s3.056-.012 4.123-.06c1.064-.05 1.791-.218 2.427-.465a4.898 4.898 0 001.772-1.153 4.898 4.898 0 001.153-1.772c.247-.636.415-1.363.465-2.427.048-1.067.06-1.407.06-4.123s-.012-3.056-.06-4.123c-.05-1.064-.218-1.791-.465-2.427a4.898 4.898 0 00-1.153-1.772A4.898 4.898 0 0016.55.525C15.914.278 15.187.11 14.123.06 13.056.012 12.716 0 10 0z"/>
+                            <path d="M10 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zM16.538 4.662a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://tiktok.com/@talangin" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0zm4.5 8.5v-2a2.5 2.5 0 01-2.5-2.5h-2v8a2 2 0 11-2-2V8a4 4 0 104 4V8.5h2.5z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/talangin" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M18.52 0H1.477C.66 0 0 .645 0 1.44v17.12C0 19.355.66 20 1.477 20h17.042c.817 0 1.481-.645 1.481-1.44V1.44C20 .645 19.336 0 18.52 0zM5.934 17.043H2.965V7.496h2.969v9.547zM4.449 6.195a1.72 1.72 0 110-3.44 1.72 1.72 0 010 3.44zm12.594 10.848h-2.965v-4.64c0-1.106-.02-2.532-1.543-2.532-1.544 0-1.78 1.206-1.78 2.45v4.722H7.789V7.496h2.844v1.305h.041c.396-.75 1.363-1.543 2.805-1.543 3.001 0 3.556 1.974 3.556 4.544v5.24h.008z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         SCRIPTS
+         ======================================== -->
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Main app script (no modules, works with file:// protocol) -->
+    <script src="js/app.js"></script>
+</body>
+</html>

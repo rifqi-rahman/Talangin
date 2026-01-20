@@ -1,0 +1,400 @@
+/**
+ * Talangin - Responsive Styles
+ * Created: 2026-01-20
+ * 
+ * Mobile-first responsive breakpoints and adjustments
+ * Breakpoints: 480px, 640px, 768px, 1024px, 1280px
+ */
+
+/* ==========================================
+   EXTRA SMALL (< 480px)
+   Mobile phones in portrait
+   ========================================== */
+
+@media (max-width: 479px) {
+    /* Typography adjustments */
+    .hero__title {
+        font-size: var(--text-3xl);
+    }
+    
+    .section-title {
+        font-size: var(--text-2xl);
+    }
+    
+    /* Hero adjustments */
+    .hero__stats {
+        flex-wrap: wrap;
+        gap: var(--space-4);
+    }
+    
+    .hero__stat {
+        flex: 1 1 calc(50% - var(--space-2));
+        min-width: 100px;
+    }
+    
+    /* Phone mockup adjustments */
+    .hero__phone-frame {
+        width: 240px;
+        height: 500px;
+        border-radius: 36px;
+    }
+    
+    .hero__phone-screen {
+        border-radius: 28px;
+    }
+    
+    /* CTA adjustments */
+    .cta__phone-frame {
+        width: 160px;
+        height: 320px;
+    }
+}
+
+/* ==========================================
+   SMALL (480px - 639px)
+   Large phones, small tablets
+   ========================================== */
+
+@media (min-width: 480px) and (max-width: 639px) {
+    .hero__cta {
+        flex-wrap: wrap;
+    }
+    
+    .hero__cta .btn {
+        flex: 1 1 auto;
+        min-width: 180px;
+    }
+}
+
+/* ==========================================
+   MEDIUM (640px - 767px)
+   Tablets in portrait
+   ========================================== */
+
+@media (min-width: 640px) and (max-width: 767px) {
+    /* Two-column feature grid */
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Testimonials grid */
+    .testimonials__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials__grid .testimonial-card:last-child {
+        grid-column: span 2;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================
+   LARGE (768px - 1023px)
+   Tablets in landscape, small laptops
+   ========================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Hero layout */
+    .hero__container {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+    
+    .hero__content {
+        text-align: center;
+    }
+    
+    .hero__subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero__cta {
+        justify-content: center;
+    }
+    
+    .hero__stats {
+        justify-content: center;
+    }
+    
+    /* Steps layout */
+    .step {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+        text-align: center;
+    }
+    
+    .step--reverse .step__content,
+    .step--reverse .step__visual {
+        order: unset;
+    }
+    
+    .step__content {
+        text-align: center;
+    }
+    
+    .step__desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ==========================================
+   EXTRA LARGE (1024px - 1279px)
+   Laptops, small desktops
+   ========================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .hero__title {
+        font-size: var(--text-5xl);
+    }
+    
+    .section-title {
+        font-size: var(--text-4xl);
+    }
+}
+
+/* ==========================================
+   2XL (1280px+)
+   Large desktops
+   ========================================== */
+
+@media (min-width: 1280px) {
+    .hero__title {
+        font-size: var(--text-7xl);
+    }
+    
+    .hero__container {
+        gap: var(--space-20);
+    }
+    
+    .hero__phone-frame {
+        width: 360px;
+        height: 740px;
+        border-radius: 56px;
+    }
+    
+    .hero__phone-screen {
+        border-radius: 48px;
+    }
+    
+    .hero__phone-notch {
+        width: 140px;
+        height: 32px;
+    }
+}
+
+/* ==========================================
+   TALL SCREENS
+   Adjust for taller viewports
+   ========================================== */
+
+@media (min-height: 900px) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .hero__scroll {
+        bottom: var(--space-12);
+    }
+}
+
+@media (max-height: 700px) {
+    .hero {
+        min-height: auto;
+        padding-bottom: var(--space-12);
+    }
+    
+    .hero__scroll {
+        display: none;
+    }
+}
+
+/* ==========================================
+   LANDSCAPE MODE
+   Phones and tablets in landscape
+   ========================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--nav-height-mobile) + var(--space-4));
+        padding-bottom: var(--space-8);
+    }
+    
+    .hero__container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-6);
+    }
+    
+    .hero__title {
+        font-size: var(--text-2xl);
+    }
+    
+    .hero__subtitle {
+        font-size: var(--text-base);
+        margin-bottom: var(--space-4);
+    }
+    
+    .hero__cta {
+        margin-bottom: var(--space-4);
+    }
+    
+    .hero__stats {
+        display: none;
+    }
+    
+    .hero__phone-frame {
+        width: 200px;
+        height: 400px;
+    }
+    
+    .hero__scroll {
+        display: none;
+    }
+}
+
+/* ==========================================
+   HIGH DPI / RETINA
+   ========================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Sharper shadows and borders on retina */
+    .btn--primary {
+        box-shadow: 0 2px 8px rgba(60, 121, 195, 0.25);
+    }
+    
+    .feature-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* ==========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ========================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover states on touch devices */
+    .btn:hover {
+        transform: none;
+    }
+    
+    .feature-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .nav__link:hover {
+        color: var(--color-text-muted);
+    }
+    
+    /* Larger tap targets */
+    .nav__link {
+        padding: var(--space-2) var(--space-3);
+    }
+    
+    .footer__link {
+        padding: var(--space-1) 0;
+    }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+    /* Hide non-essential elements */
+    .nav,
+    .mobile-menu,
+    .hero__scroll,
+    .hero__phone-glow,
+    .cta__visual,
+    .footer__social {
+        display: none !important;
+    }
+    
+    /* Reset backgrounds */
+    .hero,
+    .hero__bg,
+    .how-it-works,
+    .cta,
+    .cta__bg {
+        background: none !important;
+    }
+    
+    .hero__gradient,
+    .how-it-works__gradient,
+    .cta__gradient {
+        display: none !important;
+    }
+    
+    /* Ensure text is black */
+    body,
+    h1, h2, h3, h4, h5, h6,
+    p, a {
+        color: #000 !important;
+    }
+    
+    /* Remove animations */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    /* Page breaks */
+    .features,
+    .how-it-works,
+    .testimonials,
+    .cta {
+        page-break-before: auto;
+        page-break-inside: avoid;
+    }
+}
+
+/* ==========================================
+   DARK MODE RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+@media (prefers-color-scheme: dark) {
+    .hero__gradient--1 {
+        background: var(--color-water-dark);
+        opacity: 0.3;
+    }
+    
+    .hero__gradient--2 {
+        background: var(--color-olive-dark);
+        opacity: 0.3;
+    }
+    
+    .hero__gradient--3 {
+        background: var(--color-water-02-dark);
+        opacity: 0.2;
+    }
+    
+    .hero__pattern {
+        opacity: 0.1;
+    }
+    
+    .hero__phone-frame {
+        background: var(--color-gray-03);
+    }
+    
+    .how-it-works__gradient {
+        background: linear-gradient(
+            180deg,
+            var(--color-surface) 0%,
+            var(--color-water-dark) 50%,
+            var(--color-surface) 100%
+        );
+        opacity: 0.2;
+    }
+    
+    .cta__gradient--1 {
+        background: var(--color-olive-dark);
+    }
+    
+    .cta__gradient--2 {
+        background: var(--color-water-dark);
+    }
+}

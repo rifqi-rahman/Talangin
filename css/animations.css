@@ -1,0 +1,308 @@
+/**
+ * Talangin - Animation Styles
+ * Created: 2026-01-20
+ * 
+ * CSS animations and transition utilities
+ * Initial states for GSAP animations
+ * Respects prefers-reduced-motion
+ */
+
+/* ==========================================
+   ANIMATION INITIAL STATES
+   Used by GSAP for entrance animations
+   ========================================== */
+
+/* Fade Up Animation Initial State */
+[data-animate="fade-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Fade Down Animation Initial State */
+[data-animate="fade-down"] {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+/* Fade Left Animation Initial State */
+[data-animate="fade-left"] {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+/* Fade Right Animation Initial State */
+[data-animate="fade-right"] {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+/* Scale Up Animation Initial State */
+[data-animate="scale-up"] {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+/* Blur In Animation Initial State */
+[data-animate="blur-in"] {
+    opacity: 0;
+    filter: blur(10px);
+}
+
+/* Animated State (after GSAP runs) */
+[data-animate].animated {
+    opacity: 1;
+    transform: none;
+    filter: none;
+}
+
+/* ==========================================
+   REDUCED MOTION
+   Disables animations for users who prefer reduced motion
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    [data-animate] {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none !important;
+    }
+    
+    .hero__badge-dot,
+    .hero__scroll-line,
+    .cta__check {
+        animation: none !important;
+    }
+}
+
+/* ==========================================
+   HOVER ANIMATIONS
+   ========================================== */
+
+/* Link Underline Effect */
+.hover-underline {
+    position: relative;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition-base) var(--ease-out-expo);
+}
+
+.hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Button Press Effect */
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Card Lift Effect */
+.card-lift {
+    transition: transform var(--transition-base) var(--ease-out-expo),
+                box-shadow var(--transition-base);
+}
+
+.card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================
+   LOADING STATES
+   ========================================== */
+
+/* Skeleton Loading */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--color-surface-elevated) 25%,
+        var(--color-surface-hover) 50%,
+        var(--color-surface-elevated) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Spinner */
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--color-border);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==========================================
+   STAGGER ANIMATION DELAYS
+   CSS delays for staggered animations
+   ========================================== */
+
+[data-delay="0.1"] { --animation-delay: 0.1s; }
+[data-delay="0.2"] { --animation-delay: 0.2s; }
+[data-delay="0.3"] { --animation-delay: 0.3s; }
+[data-delay="0.4"] { --animation-delay: 0.4s; }
+[data-delay="0.5"] { --animation-delay: 0.5s; }
+[data-delay="0.6"] { --animation-delay: 0.6s; }
+[data-delay="0.7"] { --animation-delay: 0.7s; }
+[data-delay="0.8"] { --animation-delay: 0.8s; }
+
+/* ==========================================
+   PARALLAX UTILITIES
+   ========================================== */
+
+.parallax-slow {
+    will-change: transform;
+}
+
+.parallax-medium {
+    will-change: transform;
+}
+
+.parallax-fast {
+    will-change: transform;
+}
+
+/* ==========================================
+   SCROLL-LINKED ANIMATIONS
+   ========================================== */
+
+/* Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    z-index: var(--z-fixed);
+    transition: width 0.1s linear;
+}
+
+/* ==========================================
+   FLOATING ANIMATIONS
+   ========================================== */
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: -3s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ==========================================
+   GRADIENT ANIMATIONS
+   ========================================== */
+
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ==========================================
+   TEXT REVEAL ANIMATIONS
+   ========================================== */
+
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform var(--transition-slow) var(--ease-out-expo);
+}
+
+.text-reveal.revealed span {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   PAGE TRANSITIONS
+   ========================================== */
+
+.page-transition-enter {
+    opacity: 0;
+}
+
+.page-transition-enter-active {
+    opacity: 1;
+    transition: opacity var(--transition-slow);
+}
+
+.page-transition-exit {
+    opacity: 1;
+}
+
+.page-transition-exit-active {
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+/* ==========================================
+   FOCUS ANIMATIONS
+   ========================================== */
+
+@keyframes focus-ring {
+    0% {
+        outline-offset: 0px;
+        outline-color: var(--color-primary);
+    }
+    100% {
+        outline-offset: 4px;
+        outline-color: transparent;
+    }
+}
+
+.focus-animate:focus-visible {
+    animation: focus-ring 0.3s ease forwards;
+}

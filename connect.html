@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect with Talangin - Follow us on social media or get in touch with our support team.">
+    <meta name="theme-color" content="#3C79C3">
+    
+    <title>Connect — Talangin</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav nav--scrolled" role="navigation" aria-label="Main navigation">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo" aria-label="Talangin Home">
+                <svg class="nav__logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                    <path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="nav__logo-text">Talangin</span>
+            </a>
+            
+            <div class="nav__links">
+                <a href="index.html#features" class="nav__link">Features</a>
+                <a href="index.html#how-it-works" class="nav__link">How It Works</a>
+                <a href="blog.html" class="nav__link">Blog</a>
+            </div>
+            
+            <div class="nav__actions">
+                <div class="nav__lang-switcher">
+                    <button class="nav__lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                    <span class="nav__lang-divider">/</span>
+                    <button class="nav__lang-btn" data-lang="id" aria-pressed="false">ID</button>
+                </div>
+                
+                <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="nav__theme-icon nav__theme-icon--light" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.93 4.93l1.41 1.41M13.66 13.66l1.41 1.41M4.93 15.07l1.41-1.41M13.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="nav__theme-icon nav__theme-icon--dark" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <a href="index.html#download" class="btn btn--primary">
+                    <span>Get the App</span>
+                </a>
+            </div>
+            
+            <button class="nav__mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="nav__hamburger"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__content">
+            <a href="index.html#features" class="mobile-menu__link">Features</a>
+            <a href="index.html#how-it-works" class="mobile-menu__link">How It Works</a>
+            <a href="blog.html" class="mobile-menu__link">Blog</a>
+            <a href="index.html#download" class="btn btn--primary btn--full">Get the App</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header__bg">
+            <div class="page-header__gradient page-header__gradient--1"></div>
+            <div class="page-header__gradient page-header__gradient--2"></div>
+        </div>
+        <div class="page-header__container">
+            <span class="section-label">Stay Connected</span>
+            <h1 class="page-header__title">Connect With Us</h1>
+            <p class="page-header__subtitle">Follow us on social media, reach out for support, or just say hello!</p>
+        </div>
+    </header>
+
+    <!-- Connect Content -->
+    <main class="page-content">
+        <div class="page-content__container">
+            
+            <!-- Social Media Grid -->
+            <section class="connect-section">
+                <h2 class="connect-section__title">Follow Us</h2>
+                <p class="connect-section__desc">Stay up to date with the latest tips, updates, and behind-the-scenes content.</p>
+                
+                <div class="social-grid">
+                    
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/talangin" class="social-card social-card--instagram" target="_blank" rel="noopener">
+                        <div class="social-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M16 2.88c4.277 0 4.784.016 6.467.093 1.562.07 2.41.331 2.973.55.748.29 1.28.638 1.84 1.197.56.56.907 1.093 1.197 1.84.219.563.48 1.411.55 2.973.077 1.683.093 2.19.093 6.467s-.016 4.784-.093 6.467c-.07 1.562-.331 2.41-.55 2.973-.29.748-.638 1.28-1.197 1.84-.56.56-1.093.907-1.84 1.197-.563.219-1.411.48-2.973.55-1.683.077-2.19.093-6.467.093s-4.784-.016-6.467-.093c-1.562-.07-2.41-.331-2.973-.55-.748-.29-1.28-.638-1.84-1.197-.56-.56-.907-1.093-1.197-1.84-.219-.563-.48-1.411-.55-2.973C2.896 20.784 2.88 20.277 2.88 16s.016-4.784.093-6.467c.07-1.562.331-2.41.55-2.973.29-.748.638-1.28 1.197-1.84.56-.56 1.093-.907 1.84-1.197.563-.219 1.411-.48 2.973-.55C11.216 2.896 11.723 2.88 16 2.88zM16 0c-4.35 0-4.895.019-6.602.096-1.702.078-2.864.346-3.88.74A7.837 7.837 0 002.68 2.68 7.837 7.837 0 00.836 5.518c-.394 1.016-.662 2.178-.74 3.88C.019 11.105 0 11.65 0 16s.019 4.895.096 6.602c.078 1.702.346 2.864.74 3.88a7.837 7.837 0 001.844 2.838 7.837 7.837 0 002.838 1.844c1.016.394 2.178.662 3.88.74C11.105 31.981 11.65 32 16 32s4.895-.019 6.602-.096c1.702-.078 2.864-.346 3.88-.74a7.837 7.837 0 002.838-1.844 7.837 7.837 0 001.844-2.838c.394-1.016.662-2.178.74-3.88.077-1.707.096-2.252.096-6.602s-.019-4.895-.096-6.602c-.078-1.702-.346-2.864-.74-3.88a7.837 7.837 0 00-1.844-2.838A7.837 7.837 0 0026.48.836c-1.016-.394-2.178-.662-3.88-.74C20.895.019 20.35 0 16 0z"/>
+                                <path d="M16 7.784a8.216 8.216 0 100 16.432 8.216 8.216 0 000-16.432zm0 13.549a5.333 5.333 0 110-10.666 5.333 5.333 0 010 10.666zM26.461 7.459a1.92 1.92 0 11-3.84 0 1.92 1.92 0 013.84 0z"/>
+                            </svg>
+                        </div>
+                        <div class="social-card__content">
+                            <span class="social-card__platform">Instagram</span>
+                            <span class="social-card__handle">@talangin</span>
+                        </div>
+                        <div class="social-card__arrow">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com/@talangin" class="social-card social-card--tiktok" target="_blank" rel="noopener">
+                        <div class="social-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M22.958 0H17.25v21.913c0 2.61-2.087 4.739-4.667 4.739-2.58 0-4.666-2.13-4.666-4.739 0-2.565 2.042-4.652 4.579-4.739V11.304C6.291 11.391 1.5 16.348 1.5 22.435 1.5 28.609 6.422 32 12.583 32c6.161 0 11.084-4.957 11.084-11.087V10.522C25.917 11.913 28.667 13.13 32 13.13V7.304C26.75 7.13 22.958 3.478 22.958 0z"/>
+                            </svg>
+                        </div>
+                        <div class="social-card__content">
+                            <span class="social-card__platform">TikTok</span>
+                            <span class="social-card__handle">@talangin</span>
+                        </div>
+                        <div class="social-card__arrow">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/company/talangin" class="social-card social-card--linkedin" target="_blank" rel="noopener">
+                        <div class="social-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                                <path d="M29.632 0H2.363C1.058 0 0 1.034 0 2.306v27.388C0 30.966 1.058 32 2.363 32h27.269C30.938 32 32 30.966 32 29.694V2.306C32 1.034 30.938 0 29.632 0zM9.494 27.269H4.744V11.994h4.75v15.275zM7.119 9.912a2.752 2.752 0 110-5.504 2.752 2.752 0 010 5.504zm20.15 17.357h-4.744v-7.425c0-1.77-.032-4.05-2.469-4.05-2.47 0-2.848 1.929-2.848 3.92v7.555h-4.75V11.994h4.556v2.088h.063c.634-1.2 2.181-2.469 4.488-2.469 4.8 0 5.689 3.159 5.689 7.27v8.386h.015z"/>
+                            </svg>
+                        </div>
+                        <div class="social-card__content">
+                            <span class="social-card__platform">LinkedIn</span>
+                            <span class="social-card__handle">Talangin</span>
+                        </div>
+                        <div class="social-card__arrow">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:hello@talangin.app" class="social-card social-card--email">
+                        <div class="social-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="6" width="28" height="20" rx="3"/>
+                                <path d="M2 9l14 9 14-9"/>
+                            </svg>
+                        </div>
+                        <div class="social-card__content">
+                            <span class="social-card__platform">Email</span>
+                            <span class="social-card__handle">hello@talangin.app</span>
+                        </div>
+                        <div class="social-card__arrow">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Support Section -->
+            <section class="connect-section connect-section--support">
+                <div class="support-card">
+                    <div class="support-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="24" cy="24" r="20"/>
+                            <path d="M18 18c0-3.314 2.686-6 6-6s6 2.686 6 6c0 3-2 4-4 5v3"/>
+                            <circle cx="24" cy="34" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="support-card__content">
+                        <h3 class="support-card__title">Need Help?</h3>
+                        <p class="support-card__desc">
+                            Our support team is here to help you with any questions about Talangin.
+                            Whether you're having trouble with a feature, found a bug, or just want to 
+                            share feedback — we'd love to hear from you.
+                        </p>
+                        <div class="support-card__actions">
+                            <a href="mailto:support@talangin.app" class="btn btn--primary btn--large">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="10" cy="10" r="8"/>
+                                    <path d="M10 6v4l3 2"/>
+                                </svg>
+                                <span>Get Support</span>
+                            </a>
+                            <a href="mailto:feedback@talangin.app" class="btn btn--ghost btn--large">
+                                <span>Send Feedback</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Preview -->
+            <section class="connect-section">
+                <h2 class="connect-section__title">Frequently Asked</h2>
+                <p class="connect-section__desc">Quick answers to common questions.</p>
+                
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary class="faq-item__question">
+                            How do I create a new group?
+                            <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-item__answer">
+                            <p>Tap the "+" button on the home screen, select "New Group," give it a name, and invite your friends via link, contact list, or QR code. It's that simple!</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-item__question">
+                            Can I use Talangin offline?
+                            <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-item__answer">
+                            <p>Yes! You can add and view expenses offline. They'll automatically sync with your group members once you're back online.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-item__question">
+                            How does the OCR receipt scanner work?
+                            <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-item__answer">
+                            <p>Simply take a photo of your receipt. Our AI-powered OCR will automatically extract merchant name, items, prices, and total. You can review and edit before saving.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary class="faq-item__question">
+                            Is my financial data secure?
+                            <svg class="faq-item__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <div class="faq-item__answer">
+                            <p>Absolutely. We use end-to-end encryption for all your data. Your financial information is never shared with third parties or used for advertising.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <svg class="footer__logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Talangin</span>
+                    </a>
+                    <p class="footer__tagline">Split bills with elegance.</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Product</h4>
+                        <a href="index.html#features" class="footer__link">Features</a>
+                        <a href="index.html#how-it-works" class="footer__link">How It Works</a>
+                        <a href="index.html#download" class="footer__link">Download</a>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Company</h4>
+                        <a href="announcement.html" class="footer__link">Announcements</a>
+                        <a href="blog.html" class="footer__link">Blog</a>
+                        <a href="connect.html" class="footer__link">Connect</a>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Legal</h4>
+                        <a href="privacy.html" class="footer__link">Privacy Policy</a>
+                        <a href="terms.html" class="footer__link">Terms of Service</a>
+                        <a href="connect.html" class="footer__link">Contact</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Talangin. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="https://instagram.com/talangin" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 1.8c2.673 0 2.99.01 4.042.058.976.044 1.506.207 1.858.344.467.182.8.399 1.15.748.35.35.566.683.748 1.15.137.352.3.882.344 1.858.048 1.052.058 1.369.058 4.042s-.01 2.99-.058 4.042c-.044.976-.207 1.506-.344 1.858-.182.467-.399.8-.748 1.15-.35.35-.683.566-1.15.748-.352.137-.882.3-1.858.344-1.052.048-1.369.058-4.042.058s-2.99-.01-4.042-.058c-.976-.044-1.506-.207-1.858-.344a3.098 3.098 0 01-1.15-.748 3.098 3.098 0 01-.748-1.15c-.137-.352-.3-.882-.344-1.858-.048-1.052-.058-1.369-.058-4.042s.01-2.99.058-4.042c.044-.976.207-1.506.344-1.858.182-.467.399-.8.748-1.15.35-.35.683-.566 1.15-.748.352-.137.882-.3 1.858-.344C7.01 1.81 7.327 1.8 10 1.8zm0-1.8C7.284 0 6.944.012 5.877.06 4.813.11 4.086.278 3.45.525a4.898 4.898 0 00-1.772 1.153A4.898 4.898 0 00.525 3.45C.278 4.086.11 4.813.06 5.877.012 6.944 0 7.284 0 10s.012 3.056.06 4.123c.05 1.064.218 1.791.465 2.427a4.898 4.898 0 001.153 1.772 4.898 4.898 0 001.772 1.153c.636.247 1.363.415 2.427.465C6.944 19.988 7.284 20 10 20s3.056-.012 4.123-.06c1.064-.05 1.791-.218 2.427-.465a4.898 4.898 0 001.772-1.153 4.898 4.898 0 001.153-1.772c.247-.636.415-1.363.465-2.427.048-1.067.06-1.407.06-4.123s-.012-3.056-.06-4.123c-.05-1.064-.218-1.791-.465-2.427a4.898 4.898 0 00-1.153-1.772A4.898 4.898 0 0016.55.525C15.914.278 15.187.11 14.123.06 13.056.012 12.716 0 10 0z"/>
+                            <path d="M10 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zM16.538 4.662a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://tiktok.com/@talangin" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0zm4.5 8.5v-2a2.5 2.5 0 01-2.5-2.5h-2v8a2 2 0 11-2-2V8a4 4 0 104 4V8.5h2.5z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/talangin" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M18.52 0H1.477C.66 0 0 .645 0 1.44v17.12C0 19.355.66 20 1.477 20h17.042c.817 0 1.481-.645 1.481-1.44V1.44C20 .645 19.336 0 18.52 0zM5.934 17.043H2.965V7.496h2.969v9.547zM4.449 6.195a1.72 1.72 0 110-3.44 1.72 1.72 0 010 3.44zm12.594 10.848h-2.965v-4.64c0-1.106-.02-2.532-1.543-2.532-1.544 0-1.78 1.206-1.78 2.45v4.722H7.789V7.496h2.844v1.305h.041c.396-.75 1.363-1.543 2.805-1.543 3.001 0 3.556 1.974 3.556 4.544v5.24h.008z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

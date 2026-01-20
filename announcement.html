@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Talangin Announcements - Stay updated with the latest news, features, and updates from Talangin.">
+    <meta name="theme-color" content="#3C79C3">
+    
+    <title>Announcements — Talangin</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav nav--scrolled" role="navigation" aria-label="Main navigation">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo" aria-label="Talangin Home">
+                <svg class="nav__logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                    <path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="nav__logo-text">Talangin</span>
+            </a>
+            
+            <div class="nav__links">
+                <a href="index.html#features" class="nav__link">Features</a>
+                <a href="index.html#how-it-works" class="nav__link">How It Works</a>
+                <a href="blog.html" class="nav__link">Blog</a>
+            </div>
+            
+            <div class="nav__actions">
+                <div class="nav__lang-switcher">
+                    <button class="nav__lang-btn" data-lang="en" aria-pressed="true">EN</button>
+                    <span class="nav__lang-divider">/</span>
+                    <button class="nav__lang-btn" data-lang="id" aria-pressed="false">ID</button>
+                </div>
+                
+                <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="nav__theme-icon nav__theme-icon--light" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.93 4.93l1.41 1.41M13.66 13.66l1.41 1.41M4.93 15.07l1.41-1.41M13.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="nav__theme-icon nav__theme-icon--dark" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <a href="index.html#download" class="btn btn--primary">
+                    <span>Get the App</span>
+                </a>
+            </div>
+            
+            <button class="nav__mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="nav__hamburger"></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__content">
+            <a href="index.html#features" class="mobile-menu__link">Features</a>
+            <a href="index.html#how-it-works" class="mobile-menu__link">How It Works</a>
+            <a href="blog.html" class="mobile-menu__link">Blog</a>
+            <a href="index.html#download" class="btn btn--primary btn--full">Get the App</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header__bg">
+            <div class="page-header__gradient page-header__gradient--1"></div>
+            <div class="page-header__gradient page-header__gradient--2"></div>
+        </div>
+        <div class="page-header__container">
+            <span class="section-label">What's New</span>
+            <h1 class="page-header__title">Announcements</h1>
+            <p class="page-header__subtitle">Stay updated with the latest news, features, and updates from Talangin.</p>
+        </div>
+    </header>
+
+    <!-- Announcements List -->
+    <main class="page-content">
+        <div class="page-content__container">
+            
+            <!-- Announcement Card - Pinned -->
+            <article class="announcement-card announcement-card--pinned">
+                <div class="announcement-card__badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Pinned</span>
+                </div>
+                <div class="announcement-card__content">
+                    <time class="announcement-card__date" datetime="2026-01-20">January 20, 2026</time>
+                    <h2 class="announcement-card__title">🎉 Talangin v2.0 is Here!</h2>
+                    <p class="announcement-card__excerpt">
+                        We're thrilled to announce the biggest update yet! Talangin 2.0 brings a completely redesigned interface, 
+                        lightning-fast performance, and powerful new features including OCR receipt scanning, smart settlement 
+                        suggestions, and real-time expense syncing across all your devices.
+                    </p>
+                    <div class="announcement-card__tags">
+                        <span class="tag tag--primary">Major Update</span>
+                        <span class="tag tag--secondary">New Features</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Announcement Card -->
+            <article class="announcement-card">
+                <div class="announcement-card__content">
+                    <time class="announcement-card__date" datetime="2026-01-15">January 15, 2026</time>
+                    <h2 class="announcement-card__title">🌍 Now Available in 5 New Languages</h2>
+                    <p class="announcement-card__excerpt">
+                        Talangin now supports Bahasa Indonesia, Japanese, Korean, Thai, and Vietnamese! 
+                        We're committed to making expense splitting accessible to everyone across Asia.
+                    </p>
+                    <div class="announcement-card__tags">
+                        <span class="tag tag--secondary">Localization</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Announcement Card -->
+            <article class="announcement-card">
+                <div class="announcement-card__content">
+                    <time class="announcement-card__date" datetime="2026-01-10">January 10, 2026</time>
+                    <h2 class="announcement-card__title">📱 iOS Widget Support Added</h2>
+                    <p class="announcement-card__excerpt">
+                        Check your balances at a glance! Our new iOS widgets let you see who owes you 
+                        and quick-access your most active groups right from your home screen.
+                    </p>
+                    <div class="announcement-card__tags">
+                        <span class="tag tag--secondary">iOS Feature</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Announcement Card -->
+            <article class="announcement-card">
+                <div class="announcement-card__content">
+                    <time class="announcement-card__date" datetime="2026-01-05">January 5, 2026</time>
+                    <h2 class="announcement-card__title">🔒 Enhanced Security Update</h2>
+                    <p class="announcement-card__excerpt">
+                        Your security is our priority. We've implemented end-to-end encryption for all 
+                        expense data and added biometric authentication options for app access.
+                    </p>
+                    <div class="announcement-card__tags">
+                        <span class="tag tag--secondary">Security</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Announcement Card -->
+            <article class="announcement-card">
+                <div class="announcement-card__content">
+                    <time class="announcement-card__date" datetime="2025-12-20">December 20, 2025</time>
+                    <h2 class="announcement-card__title">🎄 Holiday Season Update</h2>
+                    <p class="announcement-card__excerpt">
+                        Just in time for the holidays! Create festive group themes, split gift expenses 
+                        easily, and enjoy special seasonal stickers for your expense notes.
+                    </p>
+                    <div class="announcement-card__tags">
+                        <span class="tag tag--secondary">Seasonal</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Load More -->
+            <div class="page-content__actions">
+                <button class="btn btn--ghost btn--large">
+                    Load More Announcements
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <svg class="footer__logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Talangin</span>
+                    </a>
+                    <p class="footer__tagline">Split bills with elegance.</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Product</h4>
+                        <a href="index.html#features" class="footer__link">Features</a>
+                        <a href="index.html#how-it-works" class="footer__link">How It Works</a>
+                        <a href="index.html#download" class="footer__link">Download</a>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Company</h4>
+                        <a href="announcement.html" class="footer__link">Announcements</a>
+                        <a href="blog.html" class="footer__link">Blog</a>
+                        <a href="connect.html" class="footer__link">Connect</a>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Legal</h4>
+                        <a href="privacy.html" class="footer__link">Privacy Policy</a>
+                        <a href="terms.html" class="footer__link">Terms of Service</a>
+                        <a href="connect.html" class="footer__link">Contact</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Talangin. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="https://instagram.com/talangin" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 1.8c2.673 0 2.99.01 4.042.058.976.044 1.506.207 1.858.344.467.182.8.399 1.15.748.35.35.566.683.748 1.15.137.352.3.882.344 1.858.048 1.052.058 1.369.058 4.042s-.01 2.99-.058 4.042c-.044.976-.207 1.506-.344 1.858-.182.467-.399.8-.748 1.15-.35.35-.683.566-1.15.748-.352.137-.882.3-1.858.344-1.052.048-1.369.058-4.042.058s-2.99-.01-4.042-.058c-.976-.044-1.506-.207-1.858-.344a3.098 3.098 0 01-1.15-.748 3.098 3.098 0 01-.748-1.15c-.137-.352-.3-.882-.344-1.858-.048-1.052-.058-1.369-.058-4.042s.01-2.99.058-4.042c.044-.976.207-1.506.344-1.858.182-.467.399-.8.748-1.15.35-.35.683-.566 1.15-.748.352-.137.882-.3 1.858-.344C7.01 1.81 7.327 1.8 10 1.8zm0-1.8C7.284 0 6.944.012 5.877.06 4.813.11 4.086.278 3.45.525a4.898 4.898 0 00-1.772 1.153A4.898 4.898 0 00.525 3.45C.278 4.086.11 4.813.06 5.877.012 6.944 0 7.284 0 10s.012 3.056.06 4.123c.05 1.064.218 1.791.465 2.427a4.898 4.898 0 001.153 1.772 4.898 4.898 0 001.772 1.153c.636.247 1.363.415 2.427.465C6.944 19.988 7.284 20 10 20s3.056-.012 4.123-.06c1.064-.05 1.791-.218 2.427-.465a4.898 4.898 0 001.772-1.153 4.898 4.898 0 001.153-1.772c.247-.636.415-1.363.465-2.427.048-1.067.06-1.407.06-4.123s-.012-3.056-.06-4.123c-.05-1.064-.218-1.791-.465-2.427a4.898 4.898 0 00-1.153-1.772A4.898 4.898 0 0016.55.525C15.914.278 15.187.11 14.123.06 13.056.012 12.716 0 10 0z"/>
+                            <path d="M10 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zM16.538 4.662a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://tiktok.com/@talangin" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0zm4.5 8.5v-2a2.5 2.5 0 01-2.5-2.5h-2v8a2 2 0 11-2-2V8a4 4 0 104 4V8.5h2.5z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/talangin" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M18.52 0H1.477C.66 0 0 .645 0 1.44v17.12C0 19.355.66 20 1.477 20h17.042c.817 0 1.481-.645 1.481-1.44V1.44C20 .645 19.336 0 18.52 0zM5.934 17.043H2.965V7.496h2.969v9.547zM4.449 6.195a1.72 1.72 0 110-3.44 1.72 1.72 0 010 3.44zm12.594 10.848h-2.965v-4.64c0-1.106-.02-2.532-1.543-2.532-1.544 0-1.78 1.206-1.78 2.45v4.722H7.789V7.496h2.844v1.305h.041c.396-.75 1.363-1.543 2.805-1.543 3.001 0 3.556 1.974 3.556 4.544v5.24h.008z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

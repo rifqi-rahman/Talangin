@@ -1,0 +1,337 @@
+/**
+ * Talangin - Base Styles
+ * Created: 2026-01-20
+ * 
+ * CSS reset, base typography, and fundamental styles
+ * Mobile-first approach with accessible defaults
+ */
+
+/* ==========================================
+   CSS RESET
+   ========================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    font-weight: var(--font-regular);
+    line-height: var(--leading-normal);
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-tight);
+    color: var(--color-text);
+    letter-spacing: var(--tracking-tight);
+}
+
+h1 {
+    font-size: var(--text-4xl);
+}
+
+h2 {
+    font-size: var(--text-3xl);
+}
+
+h3 {
+    font-size: var(--text-2xl);
+}
+
+h4 {
+    font-size: var(--text-xl);
+}
+
+h5 {
+    font-size: var(--text-lg);
+}
+
+h6 {
+    font-size: var(--text-base);
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: var(--text-5xl);
+    }
+    
+    h2 {
+        font-size: var(--text-4xl);
+    }
+    
+    h3 {
+        font-size: var(--text-3xl);
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: var(--text-6xl);
+    }
+    
+    h2 {
+        font-size: var(--text-5xl);
+    }
+}
+
+p {
+    margin-bottom: var(--space-4);
+    color: var(--color-text-muted);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+strong, b {
+    font-weight: var(--font-semibold);
+}
+
+em, i {
+    font-style: italic;
+}
+
+small {
+    font-size: var(--text-sm);
+}
+
+/* ==========================================
+   LISTS
+   ========================================== */
+
+ul, ol {
+    list-style: none;
+}
+
+/* ==========================================
+   IMAGES & MEDIA
+   ========================================== */
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    border-style: none;
+}
+
+/* ==========================================
+   FORMS
+   ========================================== */
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+    appearance: button;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/* ==========================================
+   TABLES
+   ========================================== */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ==========================================
+   SELECTION
+   ========================================== */
+
+::selection {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-hover);
+}
+
+::-moz-selection {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-hover);
+}
+
+/* ==========================================
+   SCROLLBAR STYLING
+   ========================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-surface-elevated);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray-03);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-02);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gray-03) var(--color-surface-elevated);
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: var(--space-8);
+        padding-right: var(--space-8);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: var(--space-10);
+        padding-right: var(--space-10);
+    }
+}
+
+/* ==========================================
+   SECTION LABELS & TITLES
+   ========================================== */
+
+.section-label {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+}
+
+.section-title {
+    font-family: var(--font-sans);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-tight);
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+}
+
+.section-title em {
+    font-style: italic;
+    color: var(--color-primary);
+}
+
+.section-subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    max-width: 600px;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: var(--text-4xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--text-xl);
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-title {
+        font-size: var(--text-5xl);
+    }
+}
